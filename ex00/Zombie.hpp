@@ -26,7 +26,7 @@ class Zombie{
         Zombie(const std::string& zombie_name) : _name(zombie_name) {}
         
         void    announce() const{
-            std::cout << _name << ": BraiiiiiiinnnzzzZ" << std::endl;
+            std::cout << _name << ": BraiiiiiiinnnzzzZ..." << std::endl;
         }
         ~Zombie(){
             std::cout << _name << " is destroyed." << std::endl;

@@ -1,9 +1,7 @@
-NAME	= Moar_brainz
+NAME	= Violence
 CC		= c++
-CFLAGS	= -Wall -Wextra -Werror -std=c++98 -g3
-SRCS	= main.cpp\
-		  Zombie.cpp\
-		  zombieHorde.cpp
+CFLAGS	= -Wall -Wextra -Werror -g3
+SRCS	= main.cpp
 OBJS	= $(SRCS:.cpp=.o)
 
 all : $(NAME)

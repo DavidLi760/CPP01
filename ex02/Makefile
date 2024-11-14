@@ -1,6 +1,6 @@
 NAME	= HI_THIS_IS_BRAIN
 CC		= c++
-CFLAGS	= -Wall -Wextra -Werror -g3
+CFLAGS	= -Wall -Wextra -Werror -std=c++98 -g3
 SRCS	= main.cpp
 OBJS	= $(SRCS:.cpp=.o)
 

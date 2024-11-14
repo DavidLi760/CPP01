@@ -12,12 +12,12 @@
 
 #include "Weapon.hpp"
 
-Weapon::Weapon() : type("Unknown") {};
+Weapon::Weapon(std::string type) : _type(type) {};
 
 const std::string& Weapon::getType() const{
-    return (type);
+    return (_type);
 }
 
 void    Weapon::setType(const std::string& newType){
-    type = newType;
+    _type = newType;
 }

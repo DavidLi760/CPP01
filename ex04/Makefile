@@ -1,10 +1,7 @@
-NAME	= Violence
+NAME	= Loser_Sed
 CC		= c++
-CFLAGS	= -Wall -Wextra -Werror -g3
-SRCS	=	main.cpp\
-			HumanA.cpp\
-			HumanB.cpp\
-			Weapon.cpp
+CFLAGS	= -Wall -Wextra -Werror -std=c++98 -g3
+SRCS	= main.cpp
 OBJS	= $(SRCS:.cpp=.o)
 
 all : $(NAME)
@@ -17,6 +14,7 @@ clean :
 
 fclean : clean
 	rm -rf $(NAME)
+	rm -rf *.replace
 
 re : fclean all
 	rm -rf $(OBJS)

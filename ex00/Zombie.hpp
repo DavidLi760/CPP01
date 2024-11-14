@@ -23,14 +23,10 @@ class Zombie{
         std::string _name;
     
     public:
-        Zombie(const std::string& zombie_name) : _name(zombie_name) {}
+        Zombie(const std::string& zombie_name);
         
-        void    announce() const{
-            std::cout << _name << ": BraiiiiiiinnnzzzZ..." << std::endl;
-        }
-        ~Zombie(){
-            std::cout << _name << " is destroyed." << std::endl;
-        }
+        void    announce() const;
+        ~Zombie();
 };
     Zombie* newZombie(std::string _name);
     void    randomChump(std::string _name);

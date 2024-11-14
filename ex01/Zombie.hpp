@@ -23,15 +23,12 @@ class Zombie{
         std::string _name;
     
     public:
-        Zombie() : _name("Unnamed") {}
-        Zombie(const std::string& zombie_name) : _name(zombie_name) {}
+        Zombie();
+        Zombie(const std::string& zombie_name);
 
-        void    announce() const{
-            std::cout << _name << ": BraiiiiiiinnnzzzZ..." << std::endl;
-        }
-        ~Zombie(){
-            std::cout << _name << " is destroyed." << std::endl;
-        }
+        void    announce() const;
+        void    setName(const std::string& name);
+        ~Zombie();
 };
 
 Zombie* zombieHorde(int N, std::string _name);

@@ -5,23 +5,26 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: davli <davli@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/12 16:06:39 by davli             #+#    #+#             */
-/*   Updated: 2024/11/12 16:06:46 by davli            ###   ########.fr       */
+/*   Created: 2024/11/13 18:42:49 by davli             #+#    #+#             */
+/*   Updated: 2024/11/13 18:43:25 by davli            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include <iostream>
+#include <string>
 
-int main(int argc, char **argv) {
-    int N = 5;
-    Zombie* horde = zombieHorde(N, "Zed");
+int	main()
+{
+	std::string		str = "HI_THIS_IS_BRAIN";
+	std::string*	strp = &str;
+	std::string&	strref = str;
 
-    if (horde) {
-        for (int i = 0; i < N; ++i) {
-            horde[i].announce();
-        }
-        delete[] horde;
-    }
+	std::cout << &str << std::endl;
+	std::cout << strp << std::endl;
+	std::cout << &strref << std::endl;
 
-    return 0;
+	std::cout << str << std::endl;
+	std::cout << *strp << std::endl;
+	std::cout << strref << std::endl;
+	return (0);
 }

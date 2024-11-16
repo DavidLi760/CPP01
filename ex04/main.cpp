@@ -12,13 +12,13 @@
 
 #include "main.hpp"
 
-void replacestr(std::string& str, const std::string& from, const std::string& to)
+void replacestr(std::string& str, const std::string& s1, const std::string& s2)
 {
-    size_t startPos = 0;
-    while ((startPos = str.find(from, startPos)) != std::string::npos)
+    int i = 0;
+    while ((i = str.find(s1, i)) != std::string::npos)
     {
-        str = str.substr(0, startPos) + to + str.substr(startPos + from.length());
-        startPos += to.length();
+        str = str.substr(0, i) + s2 + str.substr(i + s1.length());
+        i += s2.length();
     }
 }
 
@@ -26,13 +26,13 @@ void    replace_words(const std::string& filename, const std::string& s1, const 
 {
     std::ifstream inputFile(filename.c_str());
     if (!inputFile.is_open()) {
-        std::cerr << "Couldn't open file: " << filename << std::endl;
+        std::cout << "Couldn't open file: " << filename << std::endl;
         return;
     }
 
     std::ofstream outputFile((filename + ".replace").c_str());
     if (!outputFile.is_open()) {
-        std::cerr << "Couldn't create file: " << filename << ".replace" << std::endl;
+        std::cout << "Couldn't create file: " << filename << ".replace" << std::endl;
         return;
     }
 
